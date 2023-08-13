@@ -3,7 +3,7 @@ import { navigate, routes } from '@redwoodjs/router'
 
 import { useMutation } from '@redwoodjs/web'
 import { toast } from '@redwoodjs/web/toast'
-import {QUERY as PblogsQUERY} from 'src/components/PostsCell/PostsCell'
+import {QUERY as PostsQUERY} from 'src/components/PostsCell/PostsCell'
 import PblogForm from 'src/components/PblogForm/PblogForm'
 
 
@@ -46,7 +46,7 @@ export const Success = ({  Pblog ,handleClose  }) => {
     onError: (error) => {
       toast.error(error.message)
     },
-    refetchQueries: [{ query:PblogsQUERY }],
+    refetchQueries: [{ query:PostsQUERY }],
     awaitRefetchQueries: true,
 
   })
